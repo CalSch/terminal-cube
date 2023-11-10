@@ -128,8 +128,8 @@ def rotate(point:list[float],rx:float,ry:float,rz:float,origin:list[float]=[0,0,
 def project(p:list[float]) -> list[float]:
     # p[1]=1-p[1]
     return add([
-        p[0]* width/4,
-        p[1]*height/4
+        p[0]* width/4 / (p[2]/2+1.2),
+        p[1]*height/4 / (p[2]/2+1.2)
     ],[width/2,height/2])
 
 def draw_screen():
